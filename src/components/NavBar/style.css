@@ -1,0 +1,9 @@
+#marker {
+	position: absolute;
+	left: 0;
+	height: 4px;
+	background-color: #505ace;
+	bottom: 0;
+	transition: 0.4s;
+	border-radius: 2px;
+}

@@ -1,0 +1,28 @@
+.form__container::-webkit-scrollbar {
+	width: 0.5vw;
+}
+
+.form__container::-webkit-scrollbar-track {
+	background: #f1f1f1;
+	border-radius: 0.5vw;
+}
+
+.form__container::-webkit-scrollbar-thumb {
+	background: #505ace;
+	border-radius: 0.5vw;
+}
+
+.form__container::-webkit-scrollbar-thumb:hover {
+	background: #242c7f;
+}
+
+.form__container::-webkit-scrollbar-button {
+	display: none;
+}
+
+/* removing horizontal scrollbar */
+
+.form__container::-webkit-scrollbar {
+	height: 0px;
+	background: transparent;
+}
