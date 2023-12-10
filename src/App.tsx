@@ -17,7 +17,7 @@ function App() {
 					<Route path="/" element={<Navigate to="/sign" />} />
 					<Route path="/dashboard" element={<Dashboard />} />
 					<Route path="/sentence-form" element={<SetenceForm />} />
-					<Route path="/sign" element={<Sign />} />
+					<Route path="/sign/*" element={<Sign />} />
 				</Routes>
 			</main>
 		</div>
