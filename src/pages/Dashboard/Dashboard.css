@@ -1,0 +1,48 @@
+/* Dashboard.css */
+.title{
+    margin-top: 80px;
+    text-align:  center;
+  }
+  
+
+.dashboard {
+    padding-top: 30px; /* Ajusta este valor para que coincida con la altura de tu NavBar */
+    padding-left: 10px; /* Agrega un poco de espacio a la izquierda */
+    padding-right: 10px; /* Agrega un poco de espacio a la derecha */
+  }
+  
+
+  
+  /* Estilos para la tabla */
+  .table {
+    width: calc(100% - 20px); /* 100% del ancho del contenedor menos el padding */
+    max-width: 100%; /* Asegura que la tabla no sea más ancha que la pantalla */
+    border-collapse: collapse;
+    table-layout: auto; /* Esto permite que las columnas se ajusten al contenido */
+  }
+
+  .table th,
+  .table td {
+    border: 1px solid #000000; 
+    padding: 8px;
+    text-align: left;
+    max-width: 200px; /* Ajusta esto al ancho máximo que desees para tus celdas */
+    word-wrap: break-word; /* Asegura que el texto no desborde la celda */
+    text-align: center;
+  }
+  
+  .table thead th {
+    background-color: #ffffff; 
+    white-space: nowrap; /* Esto asegura que el texto del encabezado no se ajuste a una nueva línea */
+  }
+  
+  .table tbody tr:nth-child(odd) {
+    background-color: #505ace4b;
+  }
+
+  .button-container {
+    display: block;
+    padding: 0.5rem 1rem;
+    width: 200px;
+    margin: 0 auto;
+  }

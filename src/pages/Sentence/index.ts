@@ -1,1 +1,1 @@
-export { default as SetenceForm } from "./SetenceForm";
+export { default as SetenceForm } from "./SentenceForm";

@@ -56,42 +56,44 @@ const Navbar = () => {
 	};
 
 	return (
-		<header className="flex h-[72px] w-full items-center justify-between px-4 border-b-2 border-primary-200 fixed ">
-			{/* LeftSide */}
-			<div className="leftSide flex gap-x-4">
-				{/* Logo */}
+		<div className='navbar'>
+			<header className="flex h-[72px] w-full items-center justify-between px-4 border-b-2 border-primary-200 fixed ">
+				{/* LeftSide */}
+				<div className="leftSide flex gap-x-4">
+					{/* Logo */}
 
-				<div className="logo__container aspect-square w-20" onClick={goToFirst}>
-					<img
-						src={logo}
-						alt="AdminLogo"
-						className="h-full w-full object-cover"
-					/>
+					<div className="logo__container aspect-square w-20" onClick={goToFirst}>
+						<img
+							src={logo}
+							alt="AdminLogo"
+							className="h-full w-full object-cover"
+						/>
+					</div>
+
+					{/* Nav links */}
+					<nav className="relative flex items-center gap-4">
+						<div id="marker" ref={marker}></div>
+						{links.map((link) => (
+							<CustomLink key={link.text} to={link.to}>
+								<div
+									className="link  font-medium text-c_gray-700"
+									onClick={(e) => {
+										handleLinkClick(e);
+									}}
+								>
+									{link.text}
+								</div>
+							</CustomLink>
+						))}
+					</nav>
 				</div>
-
-				{/* Nav links */}
-				<nav className="relative flex items-center gap-4">
-					<div id="marker" ref={marker}></div>
-					{links.map((link) => (
-						<CustomLink key={link.text} to={link.to}>
-							<div
-								className="link  font-medium text-c_gray-700"
-								onClick={(e) => {
-									handleLinkClick(e);
-								}}
-							>
-								{link.text}
-							</div>
-						</CustomLink>
-					))}
-				</nav>
-			</div>
-			{/* RightSide */}
-			<div className="rightSide flex h-[65%] items-center gap-x-4 px-2">
-				<div className="divider h-full w-[2px] bg-c_gray-300"></div>
-				<NavAvatar />
-			</div>
-		</header>
+				{/* RightSide */}
+				<div className="rightSide flex h-[65%] items-center gap-x-4 px-2">
+					<div className="divider h-full w-[2px] bg-c_gray-300"></div>
+					<NavAvatar />
+				</div>
+			</header>
+		</div>
 	);
 };
 
