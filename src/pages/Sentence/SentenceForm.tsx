@@ -3,7 +3,6 @@ import { useInput,useInputPassword } from "../../hooks";
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 import NavBar from '../../components/NavBar/Navbar';
 import './Sentence.css'
-import './SentenceController'
 
 type input = {
 	value: string;
