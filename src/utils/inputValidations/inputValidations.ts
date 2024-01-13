@@ -87,3 +87,14 @@ export const isCedula = (cedula: string): string => {
 		return "Debe ingresar una cédula válida, el formato es V-12345678";
 	return "";
 };
+
+const validNumber = (number: string): boolean => {
+	// La expresión regular verifica si es un número entero positivo sin ceros a la izquierda
+	return !number.match(/^[1-9]\d*$/);
+  };
+  
+  export const isNumber = (number: string): string => {
+	if (notEmpty(number)) return "Debe ingresar un número";
+	if (validNumber(number)) return "Debe ingresar un número válido Entero";
+	return "";
+  };

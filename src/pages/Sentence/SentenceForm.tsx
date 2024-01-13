@@ -23,7 +23,8 @@ type Props = {
 		emailAtacInput:input,
 		passwordAtacInput: input,
 		passwordConfirAtacmInput: input,
-		cedulaAtacInput: input
+		cedulaAtacInput: input,
+		distancia: input
 	) => void;
 };
 
@@ -40,6 +41,7 @@ const SentenceForm = ({ sentence }: Props) => {
 	const passwordAtacInput = useInputPassword("");
 	const passwordConfirAtacmInput = useInputPassword("");
 	const cedulaAtacInput = useInput("");
+	const distancia = useInput("");
 
 
 	const handleClick = () => {
@@ -55,7 +57,8 @@ const SentenceForm = ({ sentence }: Props) => {
 			emailAtacInput,
 			passwordAtacInput,
 			passwordConfirAtacmInput,
-			cedulaAtacInput
+			cedulaAtacInput,
+			distancia
 
 		);
 	};
@@ -200,6 +203,22 @@ const SentenceForm = ({ sentence }: Props) => {
 						)
 					}
 				/>
+			</div>
+			{/*Atacante */}
+			<h2 className="w-[70%] text-left text-4xl font-semibold text-primary-600">
+				Ingresa la distancia mínima
+			</h2>
+			<div className="inputs_container grid grid-cols-1 gap-y-2  gap-x-6 md:grid-cols-2">
+				<Input
+					text="Distancia Mínima"
+					error={distancia.error}
+					value={distancia.value}
+					onChange={distancia.onChange}
+					onFocus={distancia.onFocus}
+				/>
+				
+				
+				
 			</div>
 			<div className=" px-3 md:px-6">
 				<Button text="Guardar" onClick={handleClick} />

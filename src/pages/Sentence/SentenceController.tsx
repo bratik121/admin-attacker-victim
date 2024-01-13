@@ -4,6 +4,7 @@ import {
 	isName,
 	isPassword,
 	isRepeatPassword,
+	isNumber,
 } from "../../utils";
 import { input } from "../../types";
 import SentenceForm from "./SentenceForm";
@@ -23,7 +24,8 @@ const SentenceController = () => {
 		emailAtacInput:input,
 		passwordAtacInput: input,
 		passwordConfirAtacmInput: input,
-		cedulaAtacInput: input
+		cedulaAtacInput: input,
+		distancia:input
 	) => {
 		let valid = true;
 
@@ -91,8 +93,11 @@ const SentenceController = () => {
 			valid = false;
 		}
 
-
-
+		if (isNumber(distancia.value)) {
+			distancia.onError(isNumber(distancia.value));
+			valid = false;
+		}
+		
 		return valid;
 	};
 
@@ -108,7 +113,8 @@ const SentenceController = () => {
 		emailAtacInput:input,
 		passwordAtacInput: input,
 		passwordConfirAtacmInput: input,
-		cedulaAtacInput: input
+		cedulaAtacInput: input,
+		distancia:input
 	) => {
             if(
                 validateSentence(
@@ -123,8 +129,8 @@ const SentenceController = () => {
                     emailAtacInput,
                     passwordAtacInput,
                     passwordConfirAtacmInput,
-                    cedulaAtacInput
-        
+                    cedulaAtacInput,
+					distancia
                 )
             
             ){
